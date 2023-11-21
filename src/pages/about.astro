@@ -3,11 +3,18 @@ import AboutLayout from "../layouts/AboutLayout.astro";
 ---
 
 <AboutLayout>
-  <h1 class="py-5 text-left text-3xl">Quienes somos?</h1>
-  <p class="text-justify text-lg">
-    Marca Nicaraguense, ventas mayoristas y detalle, alta gama de proveedores,
-    seleccion de inventarios, tendencias, calidad, precios y variedad visita
-    nuestros catalogos, tienda online envios a todos los departamentos, para que
-    puedas emprender con nosotros.
-  </p>
+  <div class="h-screen mx-5 lg:mx-20">
+    <div class="flex flex-col items-center py-10 md:grid md:grid-cols-2 md:mx-10 lg:max-w-3xl">
+      <div class="rounded-full relative overflow-hidden md:row-span-2 md:ml-20 md:rounded-none">
+        <img src="/mora-azul.jpeg" class="w-[150px] h-[150px]" />
+      </div>
+      <h1 class="py-5 text-left text-3xl text-gray-700">Quienes somos?</h1>
+      <p class="text-justify text-lg text-gray-500">
+        Marca Nicaraguense, ventas mayoristas y detalle, alta gama de proveedores,
+        seleccion de inventarios, tendencias, calidad, precios y variedad visita
+        nuestros catalogos, tienda online envios a todos los departamentos, para que
+        puedas emprender con nosotros.
+      </p>
+    </div>
+  </div>
 </AboutLayout>

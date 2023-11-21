@@ -1,5 +1,6 @@
 ---
-import BaseHeader from '../components/header/Header.astro'
+import Footer from '../components/Footer.astro';
+import BaseHeader from '../components/Header.astro'
 interface Props {
 	title: string;
 }
@@ -13,13 +14,14 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/mora-azul.jpeg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-gradient-to-r from-white from-10% via-sky-300 via-50% to-blue-300 to-90%">
 		<BaseHeader />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>

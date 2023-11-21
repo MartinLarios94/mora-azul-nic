@@ -1,5 +1,6 @@
 ---
-import BaseHeader from '../components/header/Header.astro'
+import Footer from '../components/Footer.astro';
+import BaseHeader from '../components/Header.astro'
 ---
 
 <html lang="en">
@@ -8,7 +9,8 @@ import BaseHeader from '../components/header/Header.astro'
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <BaseHeader/>
   </head>
-  <div class="mx-5">
+  <body class="bg-gradient-to-r from-white from-10% via-sky-300 via-50% to-blue-300 to-90%">
     <slot />
+    <Footer />
   </div>
 </html>
