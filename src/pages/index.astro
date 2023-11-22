@@ -8,68 +8,70 @@ const DASHBOARD: DASHBOARD_CARD[] = [
     title: "ACCESORIOS",
     description: "Todo en accesorios",
     imgUrl: "https://drive.google.com/uc?id=1pqoMNkA-dkyrYaMFWryH6fTj_FWOhol6",
-	pageName: '/accesorios'
+    pageName: "/accesorios",
   },
   {
     title: "TOPS",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1eSeIpd8Tfo9E2LuhCTvNb4TIXJmQRJIb",
-	pageName: '/tops'
+    pageName: "/tops",
   },
   {
     title: "SPORT CHIC",
     description: "Comodida, calidad, versatil",
     imgUrl: "https://drive.google.com/uc?id=1Bq6wntNdMSHp83kslETOwobKAPhsTbf7",
-	pageName: '/sport-chic'
+    pageName: "/sport-chic",
   },
   {
     title: "VERANO",
     description: "Divertido, fresco, encantador",
     imgUrl: "https://drive.google.com/uc?id=1aav3dUDhgR7YqeDjfn0wtGdPli_tkJf4",
-	pageName: '/verano'
+    pageName: "/verano",
   },
   {
     title: "JOYERÍA",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1TRGtdKZn52DHt-HE-o-V1ZW0R6DQqGtS",
-	pageName: '/joyeria'
+    pageName: "/joyeria",
   },
   {
     title: "EXCLUSIVOS",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1K3FbX7s6-oakryCTRloQKruavVotb8KS",
-	pageName: '/exclusivos'
+    pageName: "/exclusivos",
   },
   {
     title: "PIJAMAS",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1keIrBHkz4J6YxwdMCxvEdZ3J_E03OSru",
-	pageName: '/about'
+    pageName: "/about",
   },
   {
     title: "JEANS",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1FvD0ojE2CgVt9DIqAnoGFfHSVL_Po35h",
-	pageName: '/jeans'
+    pageName: "/jeans",
   },
   {
     title: "CONJUNTOS",
     description: "Tendencia, estilos y outfits",
     imgUrl: "https://drive.google.com/uc?id=1oDPbloYWhEqVSbiDegVSGkDddPZipAwt",
-	pageName: 'conjuntos'
+    pageName: "conjuntos",
   },
 ];
 ---
 
 <Layout title="Bienvenidos a Mora Azul Nicaragua!">
-  <div class="grid gap-y-3 p-5 grid-cols-1 mx-auto sm:gap-x-4 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-5xl">
+  <div
+    class="grid gap-y-3 p-5 grid-cols-1 mx-auto sm:gap-x-4 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-5xl"
+  >
     {
       DASHBOARD.map(({ title, description, imgUrl, pageName }) => (
         <DashboardCard
           title={title}
           description={description}
           imgUrl={imgUrl}
-		  page={pageName}
+          page={pageName}
         />
       ))
     }

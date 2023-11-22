@@ -22,5 +22,5 @@ export type API_RESPONSE = {
     imgUrl: string,
     srcUrl: string,
     disponibilidad: string|number;
-    descuento: number
+    descuento?: number
 }

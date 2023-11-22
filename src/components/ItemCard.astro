@@ -4,7 +4,7 @@ type Props = {
   price: number;
   imgUrl: string;
   availability: string | number;
-  descuento: number;
+  descuento?: number;
 };
 
 const { price, srcUrl, imgUrl, availability, descuento } = Astro.props;
