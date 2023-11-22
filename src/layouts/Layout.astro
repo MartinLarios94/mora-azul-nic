@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
-import BaseHeader from '../components/Header.astro'
+import NavBar from '../components/NavBar.astro'
 interface Props {
 	title: string;
 }
@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-gradient-to-r from-white from-10% via-sky-300 via-50% to-blue-300 to-90%">
-		<BaseHeader />
+		<NavBar />
 		<slot />
 		<Footer />
 	</body>

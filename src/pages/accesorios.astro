@@ -11,8 +11,8 @@ const data: API_RESPONSE[] = await res.json();
 <Layout title="Mora Azul Nic - Accessorios">
   <article class="grid grid-cols-1 mx-auto py-10 gap-y-3 max-w-xs sm:grid-cols-2 sm:gap-x-3 sm:px-20 lg:grid-cols-3 sm:max-w-5xl">
     {
-      data.map(({ precio, imgUrl, srcUrl }) => (
-        <ItemCard price={precio} imgUrl={imgUrl} srcUrl={srcUrl} />
+      data.map(({ precio, imgUrl, srcUrl, disponibilidad, descuento }) => (
+        <ItemCard price={precio} imgUrl={imgUrl} srcUrl={srcUrl} availability={disponibilidad} descuento={descuento} />
       ))
     }
   </article>

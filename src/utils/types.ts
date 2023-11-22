@@ -20,5 +20,7 @@ export enum PAGES {
 export type API_RESPONSE = {
     precio: number,
     imgUrl: string,
-    srcUrl: string
+    srcUrl: string,
+    disponibilidad: string|number;
+    descuento: number
 }
