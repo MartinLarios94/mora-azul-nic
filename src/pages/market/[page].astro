@@ -1,0 +1,42 @@
+---
+import { type API_RESPONSE, PAGES } from "../../utils/types";
+import { BASE_URL, MARKET_PAGES } from "../../utils/api";
+
+import Layout from "../../layouts/Layout.astro";
+import ItemCard from "../../components/ItemCard.astro";
+
+const { page } = Astro.params;
+
+export function getStaticPaths () {
+  return MARKET_PAGES.map((page) => {
+    return {
+      params: {
+        page,
+      },
+    };
+  });
+};
+
+const response = await fetch(`${BASE_URL}/${PAGES[page]}`);
+const result: API_RESPONSE[] = await response
+  .json()
+  .catch((err) => console.error(err));
+---
+
+<Layout title={`Mora Azul Nic - ${page.toLocaleUpperCase()}`}>
+  <article
+    class="grid grid-cols-1 mx-auto py-10 gap-y-3 max-w-xs sm:grid-cols-2 sm:gap-x-3 sm:px-20 lg:grid-cols-3 xl:grid-cols-4 sm:max-w-7xl"
+  >
+    {
+      result.map(({ precio, imgUrl, srcUrl, disponibilidad, descuento }) => (
+        <ItemCard
+          price={precio}
+          imgUrl={imgUrl}
+          srcUrl={srcUrl}
+          availability={disponibilidad}
+          descuento={descuento}
+        />
+      ))
+    }
+  </article>
+</Layout>

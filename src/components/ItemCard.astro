@@ -39,10 +39,11 @@ const whatsAppMessage = `https://api.whatsapp.com/send?phone=50578731149&text=Ho
       </a> -->
     <div
       class={`mt-2 mb-5 flex items-center justify-between sm:flex-col sm:items-start md:flex-row md:items-center ${
-        !isNumber ? "md:justify-center" : "md:mb-0"}`}
+        !isNumber ? "md:justify-center" : "md:mb-0"
+      }`}
     >
       <p>
-        <span class="sm:text-lg font-bold text-slate-900"
+        <span class="sm:text-sm font-bold text-slate-900"
           >{isNumber ? `C$ ${price}` : "No disponible"}</span
         >
         <!-- {descuento > 0 && isNumber && (
@@ -104,14 +105,20 @@ const whatsAppMessage = `https://api.whatsapp.com/send?phone=50578731149&text=Ho
         )
       }
     </div>
-    {isNumber && (
-      <span class="sm:text-lg font-thin text-slate-900">Disponible: <span class="font-bold">{availability} unds</span></span>
-    )}
+    {
+      isNumber && (
+        <span class="sm:text-sm font-thin text-slate-900">
+          Disponible: <span class="font-bold text-sm ">{availability} unds</span>
+        </span>
+      )
+    }
     <a
       href={whatsAppMessage}
       class={`flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5
                 text-center text-sm font-medium text-white hover:bg-gray-700 
-                  focus:outline-none focus:ring-4 focus:ring-blue-300 ${isNumber ? "mt-5" : "mt-12"}`}
+                  focus:outline-none focus:ring-4 focus:ring-blue-300 ${
+                    isNumber ? "mt-5" : "mt-11"
+                  }`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

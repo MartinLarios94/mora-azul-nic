@@ -1,8 +1,10 @@
+import { MARKET_PAGES } from '../utils/api'
+
 export type DASHBOARD_CARD = {
     title: string
     description: string
     imgUrl: string,
-    pageName: string
+    pageName: `/market/${MARKET_PAGE}`
 }
 
 export enum PAGES {
@@ -21,6 +23,8 @@ export type API_RESPONSE = {
     precio: number,
     imgUrl: string,
     srcUrl: string,
-    disponibilidad: string|number;
+    disponibilidad: string | number;
     descuento?: number
 }
+
+export type MARKET_PAGE = typeof MARKET_PAGES[number]
